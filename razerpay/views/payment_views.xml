@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="razerpay_payment_form_inherit" model="ir.ui.view">
+            <field name="name">payment.acquirer.razerpay.form</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment.payment_acquirer_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='acquirer']" position="after">
+                    <group attrs="{'invisible': [('provider','!=','razerpay')]}">
+                        <field name="merchant_name"/>
+                        <field name="razerpay_key_id"/>
+                        <field name="razerpay_key_secret" password="True"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="payment_method_razerpay" model="account.payment.method">
+            <field name="name">Razerpay</field>
+            <field name="code">razerpay</field>
+            <field name="payment_type">inbound</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="razerpay_form">
+        <form t-att-action="tx_url" method="POST">
+            <input type="hidden" name="amount" t-att-value="amount"/>
+            <input type="hidden" name="orderid" t-att-value="reference"/>
+            <input type="hidden" name="bill_name" t-att-value="bill_name"/>
+            <input type="hidden" name="bill_email" t-att-value="bill_email"/>
+            <input type="hidden" name="bill_mobile" t-att-value="bill_mobile"/>
+            <input type="hidden" name="bill_desc" t-att-value="bill_desc"/>
+            <input type="hidden" name="country" t-att-value="country"/>
+            <input type="hidden" name="vcode" t-att-value="vcode"/>
+        </form>
+    </template>
+</odoo>
