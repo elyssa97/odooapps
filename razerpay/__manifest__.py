@@ -5,8 +5,9 @@
     'description': 'Razerpay Malaysia payment gateway',
     'category': 'website',
     'author': 'Wizeewig (Softlakes Sdn. Bhd)',
-    'website': 'Website',
+    'website': 'www.wiz.asia',
     'price': '30' ,
+    'license': 'OPL-1' ,
     'currency' : 'USD' ,
     'depends': ['payment', 'website_sale', 'account'],
     'data': [
