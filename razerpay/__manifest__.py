@@ -10,6 +10,7 @@
     'license': 'OPL-1' ,
     'currency' : 'USD' ,
     'depends': ['payment', 'website_sale', 'account'],
+    'images': ['static/src/img/logo_RazerMerchantServices.png' , 'static/src/img/icon.png'] ,
     'data': [
         'views/payment_views.xml',
         'views/payment_razerpay_template.xml',
